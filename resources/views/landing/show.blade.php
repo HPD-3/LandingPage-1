@@ -1,8 +1,35 @@
 @extends('layouts.app')
 
+
 @section('content')
-<h1>{{ $page->title }}</h1>
-<img src="{{ asset('storage/' . $page->image_path) }}" width="400">
-<p>{{ $page->description }}</p>
-<div>{!! nl2br(e($page->content)) !!}</div>
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-10">
+        <!-- Title -->
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
+            {{ $page->title }}
+        </h1>
+
+        <!-- Image -->
+        @if($page->image_path)
+            <div class="mb-6 flex justify-center">
+                <img src="{{ asset('storage/' . $page->image_path) }}" alt="{{ $page->title }}"
+                    class="rounded-lg shadow-md max-w-full h-auto">
+            </div>
+        @endif
+
+        <!-- Short Description -->
+        @if($page->description)
+            <p class="text-gray-700 text-lg mb-6 text-center">
+                {{ $page->description }}
+            </p>
+        @endif
+        <a href="{{ route('landing.page', ['url_path' => $page->url_path]) }}">
+            Lihat Halaman
+        </a>
+
+
+        <!-- Full Content -->
+        <div class="prose prose-indigo max-w-none text-gray-800">
+            {!! nl2br(e($page->content)) !!}
+        </div>
+    </div>
 @endsection

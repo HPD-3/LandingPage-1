@@ -10,3 +10,7 @@ Route::get('/landing/{slug}', [LandingPageController::class, 'show'])->name('lan
 // Admin create page
 Route::get('/admin/create', [LandingPageController::class, 'create'])->name('landing.create');
 Route::post('/admin/store', [LandingPageController::class, 'store'])->name('landing.store');
+Route::get('/landing/pages/{url_path}', function ($url_path) {
+    return view("landing.pages.$url_path");
+})->name('landing.page');
+

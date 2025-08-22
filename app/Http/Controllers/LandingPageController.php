@@ -13,6 +13,7 @@ class LandingPageController extends Controller
         return view('landing.index', compact('pages'));
     }
 
+
     public function show($slug)
     {
         $page = LandingPage::where('slug', $slug)->firstOrFail();
@@ -23,26 +24,42 @@ class LandingPageController extends Controller
     {
         return view('landing.create');
     }
-
     public function store(Request $request)
     {
-        $request->validate([
+        // 1) Validate basic fields
+        $validated = $request->validate([
             'title' => 'required|string|max:255',
+            'url_path' => 'required|string|max:255|unique:landing_pages,url_path',
+            'description' => 'nullable|string',
+            'content' => 'nullable|string',
             'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
-        $slug = Str::slug($request->title, '-');
-        $path = $request->file('image')->store('uploads', 'public');
+        // 2) Derive slug from title
+        $slug = Str::slug($validated['title']);
 
+        // 3) Ensure the slug is unique (since it's used by /landing/{slug})
+        if (LandingPage::where('slug', $slug)->exists()) {
+            return back()
+                ->withErrors(['title' => "The title generates a slug ('$slug') that already exists. Please modify the title."])
+                ->withInput();
+        }
+
+        // 4) Store image
+        $path = $request->file('image')->store('landing_images', 'public');
+
+        // 5) Create record
         LandingPage::create([
-            'title' => $request->title,
+            'title' => $validated['title'],
             'slug' => $slug,
+            'url_path' => $validated['url_path'],
             'image_path' => $path,
-            'description' => $request->description,
-            'content' => $request->content,
+            'description' => $validated['description'] ?? null,
+            'content' => $validated['content'] ?? null,
         ]);
 
-        return redirect()->route('landing.index')->with('success', 'Landing page created!');
+        return redirect()->route('landing.index')->with('success', 'Landing Page created!');
     }
-}
 
+
+}
