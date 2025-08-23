@@ -11,7 +11,7 @@
     <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="/" class="text-2xl font-bold text-indigo-600">Hafidh<span>.</span></a>
+            <a href="#" class="text-2xl font-bold text-indigo-600">Hafidh<span>.</span></a>
             <nav class="space-x-4">
                 <a href="/" class="text-gray-600 hover:text-indigo-600">Home</a>
                 <a href="/admin/create" class="text-gray-600 hover:text-indigo-600">Add</a>
@@ -20,6 +20,18 @@
             </nav>
         </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="bg-indigo-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome To Hafidh Pages</h1>
+            <p class="text-lg md:text-xl mb-8">From Idea to Design: 50 Landing Pages.</p>
+            <a href="#"
+               class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
+               Start Now
+            </a>
+        </div>
+    </section>
 
     <!-- Content Section -->
     <div class="container mx-auto p-4">

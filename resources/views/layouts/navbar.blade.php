@@ -21,17 +21,9 @@
         </div>
     </header>
 
-    <!-- Content Section -->
-    <div class="container mx-auto p-4">
+    <div>
         @yield('content')
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 mt-20">
-        <div class="container mx-auto p-4 text-center">
-            &copy; {{ date('Y') }} {{ config('app.name', 'Laravel Landing') }}. All rights reserved.
-        </div>
-    </footer>
 
 </body>
 </html>

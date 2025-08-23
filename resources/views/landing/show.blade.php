@@ -18,18 +18,20 @@
 
         <!-- Short Description -->
         @if($page->description)
-            <p class="text-gray-700 text-lg mb-6 text-center">
+            <p class="text-gray-700  text-lg font-bold mb-7 text-center">
                 {{ $page->description }}
             </p>
         @endif
-        <a href="{{ route('landing.page', ['url_path' => $page->url_path]) }}">
-            Lihat Halaman
+        <div class="flex justify-center">
+        <a href="{{ route('landing.page', ['url_path' => $page->url_path]) }}"
+            class="text-white text-lg mb-6  text-center bg-green-500 p-2 rounded-md">
+            See Page!
         </a>
+    </div>
 
-
-        <!-- Full Content -->
-        <div class="prose prose-indigo max-w-none text-gray-800">
-            {!! nl2br(e($page->content)) !!}
-        </div>
+    <!-- Full Content -->
+    <div class="prose prose-indigo max-w-none text-gray-800">
+        {!! nl2br(e($page->content)) !!}
+    </div>
     </div>
 @endsection
