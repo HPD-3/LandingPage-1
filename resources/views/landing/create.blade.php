@@ -25,7 +25,7 @@
 
             <div>
                 <label class="block text-gray-700 font-medium mb-2">Url Path</label>
-                <input type="text" name="url_path" placeholder="/page-1" required
+                <input type="text" name="url_path" placeholder="page-1" required
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
             </div>
 

@@ -8,7 +8,6 @@
 </head>
 <body class="font-sans antialiased bg-gray-50">
 
-    <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center p-4">
             <a href="/" class="text-2xl font-bold text-indigo-600">Hafidh<span>.</span></a>

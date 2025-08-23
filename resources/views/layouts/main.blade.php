@@ -8,7 +8,6 @@
 </head>
 <body class="font-sans antialiased bg-gray-50">
 
-    <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center p-4">
             <a href="#" class="text-2xl font-bold text-indigo-600">Hafidh<span>.</span></a>
@@ -21,7 +20,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="bg-indigo-600 text-white py-20">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome To Hafidh Pages</h1>
@@ -33,12 +31,10 @@
         </div>
     </section>
 
-    <!-- Content Section -->
     <div class="container mx-auto p-4">
         @yield('content')
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 mt-20">
         <div class="container mx-auto p-4 text-center">
             &copy; {{ date('Y') }} {{ config('app.name', 'Laravel Landing') }}. All rights reserved.
