@@ -13,7 +13,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     <div class="bg-transparent  rounded-lg shadow hover:shadow-lg transition text-start">
-                        <h2 class="text-xl font-semibold mb-2">01</h2>
+                        <h2 class="text-xl font-semibold mb-2 text-gray-600">01</h2>
                         <p class="text-gray-600">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
                         </p>
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="bg-transparent  rounded-lg shadow hover:shadow-lg transition text-start">
-                        <h2 class="text-xl font-semibold mb-2">02</h2>
+                        <h2 class="text-xl font-semibold mb-2 text-gray-600">02</h2>
                         <p class="text-gray-600">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
                         </p>
@@ -30,7 +30,7 @@
                             class="w-full h-50">
                     </div>
                     <div class="bg-transparent  rounded-lg shadow hover:shadow-lg transition text-start">
-                        <h2 class="text-xl font-semibold mb-2">03</h2>
+                        <h2 class="text-xl font-semibold mb-2 text-gray-600">03</h2>
                         <p class="text-gray-600">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, explicabo.
                         </p>
