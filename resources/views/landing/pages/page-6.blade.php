@@ -3,54 +3,68 @@
 @section('content')
     <div class="m-auto">
 
-        <div class="container flex flex-col md:flex-row justify-center items-center m-10">
+        <div class="container flex flex-col md:flex-row justify-between items-center">
 
+            <!-- Bagian Teks -->
             <div class="w-full md:w-1/2 p-6 flex flex-col">
-                <h1 class="text-3xl my-10 font-bold text-center md:text-left">
-                    Discover the beauty<br> around the world
+                <h1 class="text-5xl my-10 font-bold text-center md:text-left">
+                    THE eWatch with the<br> newest microchip<br> technology
                 </h1>
-                <p class="text-1xl my-2 font-light text-gray-700 text-center md:text-left m-6 mb-10">
+                <p class="text-lg my-2 font-light text-gray-700 text-center md:text-left mb-10">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto, laudantium eum ducimus recusandae sapiente, quibusdam
                     ut magni id consequuntur, molestiae quia harum sint fugit.
                 </p>
                 <div class="text-center md:text-left">
-                    <a href="#" class="inline-block bg-gray-800 text-white rounded-md text-lg px-6 py-2">
-                        Explore
+                    <a href="#"
+                        class="inline-block bg-gray-800 text-white rounded-md border-2 border-solid border-gray-800 text-lg px-6 py-2 shadow-lg hover:bg-gray-900 transition">
+                        Order now
+                    </a>
+                    <a href="#"
+                        class="inline-block bg-white text-black rounded-md text-lg px-6 py-2 border-2 border-solid border-gray-800 shadow-lg hover:bg-gray-900 transition hover:text-white">
+                        Explore More
                     </a>
                 </div>
 
-                <div class="w-full  m-5">
-                    <span class="text-gray-600 font-medium text-2xl">01</span>
-                    <p class="m-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita praesentium quibusdam
-                        facilis
-                        similique eos soluta doloribus autem perferendis consequuntur corporis rerum modi, officia explicabo
-                        numquam sequi beatae assumenda minima doloremque.</p>
-                </div>
-                <div class="w-full  m-5">
-                    <span class="text-gray-600 font-medium text-2xl">02</span>
-                    <p class="m-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita praesentium quibusdam
-                        facilis
-                        similique eos soluta doloribus autem perferendis consequuntur corporis rerum modi, officia explicabo
-                        numquam sequi beatae assumenda minima doloremque.</p>
+                <!-- List / Feature Section -->
+                <div class="mt-8 space-y-6">
+                    <div class="border border-gray-400 rounded-2xl p-6 flex justify-around items-center">
+
+                        <!-- Item 1 -->
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-2xl">☀️</span>
+                            <p class="text-sm text-gray-700">Lorem ipsum<br>dolor amet</p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-2xl">⭐</span>
+                            <p class="text-sm text-gray-700">Lorem ipsum<br>dolor amet</p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-2xl">👁️</span>
+                            <p class="text-sm text-gray-700">Lorem ipsum<br>dolor amet</p>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-2xl">🌐</span>
+                            <p class="text-sm text-gray-700">Lorem ipsum<br>dolor amet</p>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
-            <div class="w-full md:w-1/2 relative flex justify-center -mt-0 md:-mt-[350px] ml-10 p-6">
-                <div class="w-1/2 h-[500px] md:h-[250] bg-white border border-black rounded-2xl absolute -top-6 -left-6">
-
-                </div>
-
-                <div
-                    class="w-1/3 h-[400px] md:h-[200] bg-white border border-black rounded-2xl absolute top-[150px] right--10">
-
-                </div>
-                <div class="w-1/2 h-[500px] md:h-[250] bg-black border border-black rounded-2xl absolute top-5 left-10"><img
-                        src="https://cdn.pixabay.com/photo/2019/10/29/10/16/model-4586589_640.jpg" class="bg-black border border-black rounded-2xl">
-                </div>
+            <!-- Bagian Foto -->
+            <div class="w-full md:w-1/2 flex justify-center p-6">
+                <img src="https://i.ibb.co.com/pj2GGhvy/Screenshot-2025-09-01-183218-removebg-preview-1.png"
+                    alt="Screenshot Mockup"
+                    class="max-w-sm md:max-w-md drop-shadow-2xl transform hover:scale-105 transition duration-300">
             </div>
-
-
-
         </div>
+    </div>
 @endsection
